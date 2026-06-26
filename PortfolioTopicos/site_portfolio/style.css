@@ -372,3 +372,22 @@ path.draw {
         font-size: 2.5rem;
     }
 }
+
+/* MATRIX EFFECT */
+.matrix-block {
+    background: #000;
+    border-radius: 12px;
+    border: 1px solid rgba(85, 225, 139, 0.2);
+    box-shadow: 0 0 20px rgba(85, 225, 139, 0.1);
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#matrixCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

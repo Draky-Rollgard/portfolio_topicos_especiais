@@ -88,4 +88,53 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         path.classList.remove('draw');
     });
+
+    // Matrix Rain Effect
+    const canvas = document.getElementById('matrixCanvas');
+    if(canvas) {
+        const ctx = canvas.getContext('2d');
+
+        const setCanvasSize = () => {
+            canvas.width = canvas.parentElement.offsetWidth;
+            canvas.height = canvas.parentElement.offsetHeight;
+        };
+        setCanvasSize();
+        window.addEventListener('resize', setCanvasSize);
+
+        const characters = '01';
+        const fontSize = 16;
+        let columns = canvas.width / fontSize;
+        let drops = [];
+        
+        for(let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        window.addEventListener('resize', () => {
+            columns = canvas.width / fontSize;
+            drops = [];
+            for(let x = 0; x < columns; x++) {
+                drops[x] = 1;
+            }
+        });
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#55E18B';
+            ctx.font = fontSize + 'px monospace';
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = characters.charAt(Math.floor(Math.random() * characters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 50);
+    }
 });
