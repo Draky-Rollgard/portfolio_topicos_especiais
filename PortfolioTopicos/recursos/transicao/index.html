@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+body{
+    margin:0;
+    background:#eee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+
+.container{
+    position:relative;
+    width:900px;
+    height:350px;
+}
+
+.card{
+    width:200px;
+    height:200px;
+    background:#55E18B;
+    border-radius:25px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    font-size:38px;
+
+    position:absolute;
+    left:0;
+    top:70px;
+
+    cursor:pointer;
+}
+
+/* SVG ocupa toda a tela */
+svg{
+    position:absolute;
+    inset:0;
+    overflow:visible;
+}
+
+path{
+
+    /* Não preenche o interior da curva */
+    fill:none;
+
+    /* Cor da linha */
+    stroke:black;
+
+    /* Espessura da linha */
+    stroke-width:4;
+
+    /* Deixa as pontas arredondadas */
+    /* stroke-linecap:round; */
+
+    /* Deixa as curvas e junções arredondadas */
+    /* stroke-linejoin:round; */
+
+    /* Linha pontilhada
+       Exemplo:
+       stroke-dasharray:10 8;
+    */
+
+    /* Comprimento total do caminho.
+       Deve ser aproximadamente o tamanho da linha.
+       Quanto maior esse número, maior poderá ser o caminho. */
+    stroke-dasharray:450;
+
+    /* Mantém toda a linha escondida antes da animação.
+       Quando passar para 0, a linha será desenhada. */
+    stroke-dashoffset:450;
+
+    /* Velocidade da animação */
+    transition:1s ease;
+
+    /* Adiciona um brilho na linha */
+    /* filter:drop-shadow(0 0 8px #55ff99); */
+
+    /* Exemplos de cores */
+    /* stroke:#2ecc71; */
+    /* stroke:#3498db; */
+    /* stroke:#ff5555; */
+}
+
+.texto{
+
+    position:absolute;
+
+    left:360px;
+    top:40px;
+
+    opacity:0;
+    transform:translateX(-15px);
+
+    transition:.4s;
+    transition-delay:.8s;
+
+    font-size:28px;
+}
+
+/* animação */
+
+.container:hover path{
+
+    stroke-dashoffset:0;
+     /*customizações da linha
+     filter:drop-shadow(0 0 8px #55ff99); brilho
+     transition:2s ease; velocidade
+     */
+    
+
+}
+
+.container:hover .texto{
+
+    opacity:1;
+    transform:translateX(0);
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        Card com<br>fluxo
+    </div>
+
+    <svg>
+        <!--
+            M = Move para um ponto inicial
+            H = Linha Horizontal
+            V = Linha Vertical
+            Q = Curva Quadrática (curva suave)
+
+            O caminho abaixo significa:
+            Começa em (200,170)
+            Anda até x=250
+            Faz uma curva até (300,130)
+            Sobe até y=80
+            Segue reto até x=560
+        -->
+
+        <!-- começa na caixa e termina no texto -->
+
+        <path d="M200 170
+                 H250
+                 Q300 170 300 130
+                 V80
+                 H560"/>
+
+    </svg>
+
+    <div class="texto">
+        Nessa unidade trabalhamos métodos de...
+    </div>
+
+</div>
+
+</body>
+</html>

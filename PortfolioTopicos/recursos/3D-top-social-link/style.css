@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+    margin: 0;
+    font-family: sans-serif;
+}
+.social-links ul {
+    
+    align-items: flex-end;
+    transform: rotate(-15deg);
+}
+
+.social-links {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+   
+
+    transform: rotate(-15deg) skewY(-5deg);
+    transform-origin: center;
+}
+
+.social-links li {
+    position: relative;
+    width: 100px;
+    height: 200px;
+}
+/*
+.social-links a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+*/
+.social-links a span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(185, 185, 185);
+    font-size: 24px;
+    transition: 0.5s;
+    
+
+    background-color: #292727;
+}
+
+/* Opacidade dos spans */
+a span:nth-of-type(1) { opacity: 0.2; }
+a span:nth-of-type(2) { opacity: 0.4; }
+a span:nth-of-type(3) { opacity: 0.6; }
+a span:nth-of-type(4) { opacity: 0.8; }
+a span:nth-of-type(5) { opacity: 1; }
+
+.social-links li:hover {
+    z-index: 10;
+}
+/* modif*/
+.social-links a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
+    background-color: #292727;
+    color: white;
+    font-size: 24px;
+
+    transition: transform 0.4s ease;
+}
+.social-links a::before,
+.social-links a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+/* camada intermediária */
+.social-links a::before {
+    transform: translate(-5px, 5px);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+/* camada mais distante */
+.social-links a::after {
+    transform: translate(-10px, 10px);
+    opacity: 0.3;
+    z-index: -2;
+}
+
+
+
+li:hover > a span:nth-of-type(1) { transform: translate(5px, -5px); }
+li:hover > a span:nth-of-type(2) { transform: translate(10px, -10px); }
+li:hover > a span:nth-of-type(3) { transform: translate(15px, -15px); }
+li:hover > a span:nth-of-type(4) { transform: translate(20px, -20px); }
+li:hover > a span:nth-of-type(5) { transform: translate(25px, -25px); }
+
+/* Gradientes de hover */
+li:nth-of-type(1):hover span {
+    background-color: #e1306c;
+    background-image: linear-gradient(270deg, #ff073d, #833ab4, #1a0c9b); /*#833ab4, #fd1d1d, #ec7f01*/
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+}
+
+li:nth-of-type(2):hover span {
+    background-color: #4267B2;
+    background-image: linear-gradient(270deg, #006eff, #1459a9, #0501d4, #030688);
+    background-size: 800% 800%;
+    animation: gradient 10s ease infinite;
+}
+
+li:nth-of-type(3):hover span {
+    background-color: #1da1f2;
+    background-image: linear-gradient(270deg, #397fbd, #00c3fe);
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+}
+
+li:nth-of-type(4):hover span {
+    background-color: #9146ff;
+    background-image: linear-gradient(270deg, #956ad6, #6c17ec);
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

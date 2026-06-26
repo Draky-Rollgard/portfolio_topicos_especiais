@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Tópicos Especiais</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HERO SECTION (Cards e Efeitos) -->
+    <header class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="main-title">Portfólio de Tópicos Especiais</h1>
+            <p class="subtitle">Engenharia de Computação • 2026</p>
+            
+            <div class="cards-container">
+                <ul class="topic-cards" id="cardsList">
+                    <li data-id="1" data-title="A Unidade" data-desc="Visão geral e introdução à disciplina de Tópicos Especiais." data-color="#ff073d">
+                        <a href="javascript:void(0)" onclick="scrollToSection('unidade')">
+                            <span></span><span></span><span></span><span></span>
+                            <span class="fas fa-graduation-cap"></span>
+                        </a>
+                    </li>
+                    <li data-id="2" data-title="Spring Boot" data-desc="Fundamentos, configuração de ambiente e injeção de dependências." data-color="#68b63b">
+                        <a href="javascript:void(0)" onclick="scrollToSection('spring')">
+                            <span></span><span></span><span></span><span></span>
+                            <span class="fas fa-leaf"></span>
+                        </a>
+                    </li>
+                    <li data-id="3" data-title="Padrão MVC" data-desc="Desenvolvimento de APIs REST utilizando o framework Spring Web." data-color="#00c3fe">
+                        <a href="javascript:void(0)" onclick="scrollToSection('mvc')">
+                            <span></span><span></span><span></span><span></span>
+                            <span class="fas fa-code"></span>
+                        </a>
+                    </li>
+                    <li data-id="4" data-title="Dados (JPA)" data-desc="Persistência de dados através do Spring Data JPA, Hibernate e MySQL." data-color="#956ad6">
+                        <a href="javascript:void(0)" onclick="scrollToSection('dados')">
+                            <span></span><span></span><span></span><span></span>
+                            <span class="fas fa-database"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Resumo Lateral (Transição) -->
+                <div class="summary-box" id="summaryBox">
+                    <h3 id="summaryTitle">Passe o mouse</h3>
+                    <p id="summaryText">Explore os tópicos acima para visualizar os conteúdos estudados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SVG overlay para as linhas de transição -->
+        <svg id="transitionSvg">
+            <path id="transitionPath" d=""></path>
+        </svg>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO (Single Page Scroll) -->
+    <main>
+        <section id="unidade" class="content-section">
+            <div class="section-inner">
+                <h2>A Unidade</h2>
+                <div class="content-grid">
+                    <div class="text-block">
+                        <h3>Tópicos Especiais</h3>
+                        <p>A disciplina de Tópicos Especiais abordou tecnologias modernas e cruciais para a formação em Engenharia de Computação, com foco no ecossistema Java.</p>
+                        <p>Durante o período, os estudos foram direcionados ao desenvolvimento back-end corporativo moderno.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="spring" class="content-section bg-alt">
+            <div class="section-inner">
+                <h2>Spring Boot</h2>
+                <div class="content-grid">
+                    <div class="text-block">
+                        <h3>Configuração e Facilidade</h3>
+                        <p>O Spring Boot revolucionou a forma como iniciamos projetos Java. A ferramenta "Spring Initializr" (start.spring.io) permite adicionar dependências iniciais facilmente.</p>
+                        <ul>
+                            <li><strong>Autoconfiguração:</strong> Menos XML, mais foco no código.</li>
+                            <li><strong>Tomcat Embutido:</strong> Execução autônoma de aplicações.</li>
+                            <li><strong>Injeção de Dependências:</strong> Inversão de controle com facilidade.</li>
+                        </ul>
+                    </div>
+                    <div class="visual-block code-block">
+                        <pre><code>@SpringBootApplication
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mvc" class="content-section">
+            <div class="section-inner">
+                <h2>Padrão MVC e APIs</h2>
+                <div class="content-grid">
+                    <div class="text-block">
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Através do <code>spring-boot-starter-webmvc</code>, estruturamos a aplicação utilizando a arquitetura Model-View-Controller, ideal para APIs RESTful.</p>
+                        <ul>
+                            <li><strong>Controllers:</strong> Recebem as requisições HTTP (@RestController).</li>
+                            <li><strong>Rotas:</strong> Mapeamento flexível com @GetMapping, @PostMapping, etc.</li>
+                            <li><strong>JSON:</strong> Serialização automática de objetos.</li>
+                        </ul>
+                    </div>
+                    <div class="visual-block code-block">
+                        <pre><code>@RestController
+@RequestMapping("/api/usuarios")
+public class UsuarioController {
+    @GetMapping
+    public List&lt;Usuario&gt; listar() {
+        // Retorna lista
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dados" class="content-section bg-alt">
+            <div class="section-inner">
+                <h2>Persistência de Dados</h2>
+                <div class="content-grid">
+                    <div class="text-block">
+                        <h3>JPA e MySQL</h3>
+                        <p>A persistência foi tratada com <code>spring-boot-starter-data-jpa</code> e o conector do MySQL. Evitamos SQLs manuais com a abstração do Hibernate.</p>
+                        <ul>
+                            <li><strong>Entidades:</strong> Mapeamento de tabelas através de classes (@Entity).</li>
+                            <li><strong>Repositórios:</strong> Interfaces que herdam JpaRepository simplificam o CRUD.</li>
+                            <li><strong>Lombok:</strong> Redução de boilerplate (Getters/Setters automáticos).</li>
+                        </ul>
+                    </div>
+                    <div class="visual-block code-block">
+                        <pre><code>@Entity
+@Data // Lombok
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>Projeto Avaliativo desenvolvido para a disciplina de Tópicos Especiais - Junho de 2026.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
