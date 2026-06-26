@@ -162,6 +162,11 @@ body {
     background-image: linear-gradient(270deg, #956ad6, #6c17ec);
     background-size: 200% 200%; animation: gradient 6s ease infinite;
 }
+.topic-cards li:nth-of-type(5):hover span {
+    background-color: #ff6c37;
+    background-image: linear-gradient(270deg, #ff6c37, #c24b22);
+    background-size: 200% 200%; animation: gradient 6s ease infinite;
+}
 
 @keyframes gradient {
     0% { background-position: 0% 50%; }

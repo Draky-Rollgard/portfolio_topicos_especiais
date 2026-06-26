@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- HERO SECTION (Cards e Efeitos) -->
@@ -21,31 +25,46 @@
         <div class="hero-content">
             <h1 class="main-title">Portfólio de Tópicos Especiais</h1>
             <p class="subtitle">Engenharia de Computação • 2026</p>
-            
+
             <div class="cards-container">
                 <ul class="topic-cards" id="cardsList">
-                    <li data-id="1" data-title="A Unidade" data-desc="Visão geral e introdução à disciplina de Tópicos Especiais." data-color="#ff073d">
+                    <li data-id="1" data-title="A Unidade"
+                        data-desc="Visão geral e introdução à disciplina de Tópicos Especiais." data-color="#ff073d">
                         <a href="javascript:void(0)" onclick="scrollToSection('unidade')">
                             <span></span><span></span><span></span><span></span>
                             <span class="fas fa-graduation-cap"></span>
                         </a>
                     </li>
-                    <li data-id="2" data-title="Spring Boot" data-desc="Fundamentos, configuração de ambiente e injeção de dependências." data-color="#68b63b">
+                    <li data-id="2" data-title="Spring Boot"
+                        data-desc="Fundamentos, configuração de ambiente e injeção de dependências."
+                        data-color="#68b63b">
                         <a href="javascript:void(0)" onclick="scrollToSection('spring')">
                             <span></span><span></span><span></span><span></span>
                             <span class="fas fa-leaf"></span>
                         </a>
                     </li>
-                    <li data-id="3" data-title="Padrão MVC" data-desc="Desenvolvimento de APIs REST utilizando o framework Spring Web." data-color="#00c3fe">
+                    <li data-id="3" data-title="Padrão MVC"
+                        data-desc="Desenvolvimento de APIs REST utilizando o framework Spring Web."
+                        data-color="#00c3fe">
                         <a href="javascript:void(0)" onclick="scrollToSection('mvc')">
                             <span></span><span></span><span></span><span></span>
                             <span class="fas fa-code"></span>
                         </a>
                     </li>
-                    <li data-id="4" data-title="Dados (JPA)" data-desc="Persistência de dados através do Spring Data JPA, Hibernate e MySQL." data-color="#956ad6">
+                    <li data-id="4" data-title="Dados (JPA)"
+                        data-desc="Persistência de dados através do Spring Data JPA, Hibernate e MySQL."
+                        data-color="#956ad6">
                         <a href="javascript:void(0)" onclick="scrollToSection('dados')">
                             <span></span><span></span><span></span><span></span>
                             <span class="fas fa-database"></span>
+                        </a>
+                    </li>
+                    <li data-id="5" data-title="Testes de API" 
+                        data-desc="Validação das rotas, consultas e requisições HTTP utilizando o Postman." 
+                        data-color="#ff6c37">
+                        <a href="javascript:void(0)" onclick="scrollToSection('postman')">
+                            <span></span><span></span><span></span><span></span>
+                            <span class="fas fa-rocket"></span>
                         </a>
                     </li>
                 </ul>
@@ -62,7 +81,7 @@
         <svg id="transitionSvg">
             <path id="transitionPath" d=""></path>
         </svg>
-        
+
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
@@ -75,9 +94,17 @@
                 <h2>A Unidade</h2>
                 <div class="content-grid">
                     <div class="text-block">
-                        <h3>Tópicos Especiais</h3>
-                        <p>A disciplina de Tópicos Especiais abordou tecnologias modernas e cruciais para a formação em Engenharia de Computação, com foco no ecossistema Java.</p>
-                        <p>Durante o período, os estudos foram direcionados ao desenvolvimento back-end corporativo moderno.</p>
+                        <h3>Introdução Técnica da Disciplina</h3>
+                        <p>O desenvolvimento de software corporativo baseia-se na consolidação de arquiteturas robustas
+                            e bem estruturadas. No contexto de sistemas distribuídos, a adoção da <strong>Arquitetura
+                                Orientada a Serviços (SOA)</strong> permite que componentes independentes colaborem de
+                            forma descentralizada através de Web Services e do modelo arquitetural
+                            <strong>REST</strong>.
+                        </p>
+                        <p>As aplicações web modernas são estruturadas em camadas funcionais: Front-End, Back-End e
+                            Banco de Dados. Toda a comunicação síncrona entre o cliente e o servidor apoia-se no
+                            protocolo <strong>HTTP</strong>, seguindo o fluxo de Requisição (Request) e Resposta
+                            (Response).</p>
                     </div>
                 </div>
             </div>
@@ -88,21 +115,25 @@
                 <h2>Spring Boot</h2>
                 <div class="content-grid">
                     <div class="text-block">
-                        <h3>Configuração e Facilidade</h3>
-                        <p>O Spring Boot revolucionou a forma como iniciamos projetos Java. A ferramenta "Spring Initializr" (start.spring.io) permite adicionar dependências iniciais facilmente.</p>
+                        <h3> Autoconfiguração e Propriedades</h3>
+                        <p>O ecossistema Spring consolida-se como a principal escolha técnica para o desenvolvimento
+                            corporativo Java. O Spring Boot introduz o princípio de convenção sobre configuração,
+                            disponibilizando um ambiente autoconfigurável e pronto para execução (production-ready).</p>
                         <ul>
-                            <li><strong>Autoconfiguração:</strong> Menos XML, mais foco no código.</li>
-                            <li><strong>Tomcat Embutido:</strong> Execução autônoma de aplicações.</li>
-                            <li><strong>Injeção de Dependências:</strong> Inversão de controle com facilidade.</li>
+                            <li><strong>Dependências (POM.xml):</strong> Gerenciamento com Apache Maven integrando web,
+                                jpa e lombok.</li>
+                            <li><strong>Application.properties:</strong> Arquivo central para definir o acoplamento do
+                                sistema ao banco de dados e ditar o comportamento dinâmico do Hibernate.</li>
                         </ul>
                     </div>
                     <div class="visual-block code-block">
-                        <pre><code>@SpringBootApplication
-public class DemoApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
-    }
-}</code></pre>
+                        <pre><code># Configurações do Mecanismo de ORM (JPA / Hibernate)
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+# Indentamento visual e formatação de logs SQL
+spring.jpa.properties.hibernate.format_sql=true</code></pre>
                     </div>
                 </div>
             </div>
@@ -113,21 +144,33 @@ public class DemoApplication {
                 <h2>Padrão MVC e APIs</h2>
                 <div class="content-grid">
                     <div class="text-block">
-                        <h3>Desenvolvimento Web</h3>
-                        <p>Através do <code>spring-boot-starter-webmvc</code>, estruturamos a aplicação utilizando a arquitetura Model-View-Controller, ideal para APIs RESTful.</p>
+                        <h3>Model-View-Controller e Endpoints</h3>
+                        <p>O padrão de arquitetura MVC organiza a aplicação de modo a desacoplar a lógica de
+                            apresentação da lógica de controle e dos dados. A camada de controle atua como a interface
+                            de entrada que mapeia os endpoints expostos, aciona o processamento das regras de negócio e
+                            formata a resposta técnica em JSON.</p>
                         <ul>
-                            <li><strong>Controllers:</strong> Recebem as requisições HTTP (@RestController).</li>
-                            <li><strong>Rotas:</strong> Mapeamento flexível com @GetMapping, @PostMapping, etc.</li>
-                            <li><strong>JSON:</strong> Serialização automática de objetos.</li>
+                            <li><strong>@RestController:</strong> Indica que as respostas dos métodos devem ser escritas
+                                diretamente no corpo da mensagem HTTP.</li>
+                            <li><strong>Mapeamento:</strong> Anotações como @GetMapping e @PostMapping definem os verbos
+                                HTTP correspondentes.</li>
+                            <li><strong>Parâmetros:</strong> Uso de @RequestBody, @PathVariable e @RequestParam para
+                                extrair dados da requisição.</li>
                         </ul>
                     </div>
                     <div class="visual-block code-block">
                         <pre><code>@RestController
-@RequestMapping("/api/usuarios")
+@RequestMapping("/usuarios")
 public class UsuarioController {
-    @GetMapping
-    public List&lt;Usuario&gt; listar() {
-        // Retorna lista
+    
+    @PostMapping("/save")
+    public Usuario save(@RequestBody Usuario usuario) {
+        return repository.save(usuario);
+    }
+    
+    @GetMapping("/listarTodos")
+    public List&lt;Usuario&gt; listarTodos() {
+        return repository.findAll();
     }
 }</code></pre>
                     </div>
@@ -140,33 +183,77 @@ public class UsuarioController {
                 <h2>Persistência de Dados</h2>
                 <div class="content-grid">
                     <div class="text-block">
-                        <h3>JPA e MySQL</h3>
-                        <p>A persistência foi tratada com <code>spring-boot-starter-data-jpa</code> e o conector do MySQL. Evitamos SQLs manuais com a abstração do Hibernate.</p>
+                        <h3>Java Persistence API (JPA)</h3>
+                        <p>O mecanismo de persistência orientada a objetos utiliza a especificação JPA em conjunto com o
+                            Hibernate. O propósito é o Mapeamento Objeto-Relacional (ORM), eliminando o descompasso de
+                            impedância ao converter tabelas e tuplas relacionais de bancos de dados diretamente em
+                            classes e atributos no paradigma orientado a objetos.</p>
                         <ul>
-                            <li><strong>Entidades:</strong> Mapeamento de tabelas através de classes (@Entity).</li>
-                            <li><strong>Repositórios:</strong> Interfaces que herdam JpaRepository simplificam o CRUD.</li>
-                            <li><strong>Lombok:</strong> Redução de boilerplate (Getters/Setters automáticos).</li>
+                            <li><strong>@Entity e @Data:</strong> A classe de modelo representa a estrutura estática da
+                                tabela, e o Lombok elimina métodos repetitivos de encapsulamento.</li>
+                            <li><strong>JpaRepository:</strong> Interface base que introduz rotinas padrão de
+                                manipulação de dados (CRUD).</li>
+                            <li><strong>JPQL:</strong> Consultas customizadas com suporte a parâmetros nomeados, funções
+                                de agregação (SUM, COUNT) e operadores lógicos e relacionais.</li>
                         </ul>
                     </div>
                     <div class="visual-block code-block">
-                        <pre><code>@Entity
-@Data // Lombok
-public class Usuario {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nome;
+                        <pre><code>public interface UsuarioRepository extends JpaRepository&lt;Usuario, Long&gt; {
+    
+    // JPQL Personalizado com LIKE
+    @Query("SELECT u FROM Usuario u WHERE u.nome LIKE CONCAT('%', :nome, '%')")
+    List&lt;Usuario&gt; buscarContem(@Param("nome") String nome);
+
+    // Funções de Agregação (Analytics)
+    @Query("SELECT COUNT(u.nome) FROM Usuario u")
+    Long contarNomes();
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="postman" class="content-section">
+            <div class="section-inner">
+                <h2>Testes e Rotas (Postman)</h2>
+                <div class="content-grid">
+                    <div class="text-block">
+                        <h3>Validação da API REST</h3>
+                        <p>Para garantir o funcionamento adequado da nossa API, utilizamos a ferramenta <strong>Postman</strong>. Ela simula o papel de um cliente (como o navegador ou um Front-End) permitindo disparar requisições HTTP diretamente para o servidor Spring Boot (ex: <code>http://localhost:8081/</code>).</p>
+                        <ul>
+                            <li><strong>Criação e Atualização:</strong> Rotas com <code>POST</code> e <code>PUT</code> recebem objetos JSON no corpo (<em>Body</em>) para popular ou alterar o banco.</li>
+                            <li><strong>Consultas Detalhadas:</strong> Testamos as rotas <code>GET</code> para recuperar o JSON com a lista de usuários, validar as buscas customizadas com <code>LIKE</code> e a extração por <code>@PathVariable</code>.</li>
+                            <li><strong>Respostas e Status:</strong> Em cada teste, confirmamos se o servidor retornava o <em>Status Code 200 (OK)</em> e os dados esperados.</li>
+                        </ul>
+                    </div>
+                    <div class="visual-block code-block">
+                        <pre><code>// Simulação de Requisição via Postman
+URL: http://localhost:8081/save
+Método: POST
+Headers: Content-Type: application/json
+Body (Raw/JSON):
+{
+  "usuario": "marcio",
+  "senha": "123"
+}
+
+// Resposta Recebida do Servidor:
+{
+  "idUsuario": 2,
+  "usuario": "marcio",
+  "senha": "123"
 }</code></pre>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer class="footer">
         <p>Projeto Avaliativo desenvolvido para a disciplina de Tópicos Especiais - Junho de 2026.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
