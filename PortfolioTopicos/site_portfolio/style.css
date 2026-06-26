@@ -391,3 +391,40 @@ path.draw {
     height: 100%;
     display: block;
 }
+
+/* MATERIAIS DE DOWNLOAD */
+.text-center {
+    text-align: center;
+}
+.text-center h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.download-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.8rem;
+    background: rgba(85, 225, 139, 0.05);
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: var(--accent);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(85, 225, 139, 0.3);
+}
